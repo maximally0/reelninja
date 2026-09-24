@@ -4,7 +4,8 @@ Landing page for **ReelNinja** — production infrastructure for content compani
 
 > 10× the videos. Same editing team.
 
-**Live:** <https://reelninja.visual-language-4c9.workers.dev>
+**Live:** not currently deployed. The source in this repo is the canonical
+artifact; see *Deploy* below to put it back up in one command.
 
 The page sells a production *system*, not a clip service. An agency hands over
 how it edits once, that becomes a Style System, and from then on output stops
