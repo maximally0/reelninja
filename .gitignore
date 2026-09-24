@@ -1,0 +1,11 @@
+# Build intermediates — the generator's own inputs, not its outputs. They are
+# kept locally and are not needed by anyone reading or building this repo.
+_*.ttf
+_sizes.png
+
+# Wrangler's local cache. Deploy state never belongs in a public repo.
+.wrangler/
+
+# `site/` is deliberately NOT ignored. It is generated from `src/` + `assets/`
+# by scripts/reelninja_build.py, but it is committed on purpose so the repo is
+# immediately viewable (and servable by GitHub Pages) without a build step.

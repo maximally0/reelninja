@@ -1,0 +1,135 @@
+/* ==========================================================================
+   REELNINJA — design tokens
+   One idea: no accent colour. The videos are the only colour on this page.
+   Signal is inversion, never hue. Every value is referenced by a component.
+   ========================================================================== */
+
+:root {
+  /* ---------- surfaces: cool neutral, not warm ----------
+     Meritalien's paper is warm because immigration is an editorial, human
+     product. A production engine should read machined, so these are neutral.
+     It also lets the ink bands read as true black rather than brown-black. */
+  --ink-900: #0a0a0b;   /* hero, footer, ink bands */
+  --ink-800: #141416;   /* raised on ink */
+  --ink-700: #1d1d20;   /* frame fill on ink */
+  --ink-600: #28282c;   /* hairline on ink */
+
+  --paper-100: #fafafa; /* page */
+  --paper-200: #f2f2f3; /* alt band, frame fill */
+  --paper-300: #e7e7e9; /* inset, slider track */
+
+  /* ---------- text ---------- */
+  --text: #0a0a0b;
+  --text-muted: #63636a;      /* 5.6:1 on paper. Passes AA. */
+  --text-faint: #6f6f78;      /* 4.5:1 on paper. AA floor. Do not go lighter. */
+  --text-invert: #fafafa;
+  --text-invert-muted: #a3a3ab; /* 7.6:1 on ink. Passes AA. */
+
+  /* ---------- lines ---------- */
+  --line: rgba(10, 10, 11, 0.12);
+  --line-strong: rgba(10, 10, 11, 0.22);
+  --line-invert: rgba(250, 250, 250, 0.14);
+  --line-invert-strong: rgba(250, 250, 250, 0.28);
+
+  /* ---------- type ---------- */
+  --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "Departure Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* fluid scale — one ratio, no arbitrary sizes */
+  --t-display: clamp(2.5rem, 7.8vw, 6rem);       /* hero */
+  --t-h1:      clamp(2rem, 4.6vw, 3.25rem);
+  --t-h2:      clamp(1.625rem, 3.4vw, 2.5rem);   /* serif register */
+  --t-h3:      clamp(1.0625rem, 1.4vw, 1.25rem);
+  --t-lead:    clamp(1.0625rem, 1.4vw, 1.25rem); /* serif lead */
+  --t-reading: clamp(2.25rem, 5.4vw, 4rem);      /* calculator headline number */
+  --t-body:    1.0625rem;   /* 17px */
+  --t-small:   0.875rem;
+  --t-mono:    0.78125rem;  /* 12.5px */
+
+  --lh-display: 0.95;
+  --lh-heading: 1.06;
+  --lh-lead: 1.5;
+  --lh-body: 1.62;
+
+  --tr-display: -0.04em;   /* hard negative tracking is what makes Geist 500
+                              look like it cost money */
+  --tr-heading: -0.022em;
+  --tr-mono: 0.16em;       /* mono wants to breathe */
+
+  /* ---------- space: 4px base, no off-scale values ---------- */
+  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
+  --s-5: 1.25rem;  --s-6: 1.5rem;   --s-8: 2rem;     --s-10: 2.5rem;
+  --s-12: 3rem;    --s-16: 4rem;    --s-20: 5rem;    --s-24: 6rem;
+  --s-32: 8rem;
+
+  /* section rhythm */
+  --band-y: clamp(3.5rem, 10vw, 9rem);
+  --shell-x: clamp(1.25rem, 4vw, 3rem);
+  --shell-max: 80rem;      /* 1280px — wider than meritalien so the frame
+                              grids have room */
+
+  /* ---------- radii: exactly two, sharper than meritalien's ----------
+     4/10 is right for an editorial product. A studio should read more
+     machined, so these are tighter. */
+  --r-sm: 3px;
+  --r-lg: 8px;
+
+  /* ---------- motion: one curve ---------- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 260ms;
+  --dur: 420ms;
+  --dur-slow: 700ms;
+}
+
+/* Reduced motion: kill the theatre, keep the meaning. */
+/* Reduced motion shortens what moves; it must not silence the interface.
+   Zeroing these to 1ms made every hover, focus ring and state change an
+   unannounced jump -- its own accessibility failure, and the reason a visitor
+   with the OS setting on saw a page that appeared completely broken. Large and
+   continuous motion is removed per-rule in page.css instead. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 150ms; --dur: 300ms; --dur-slow: 400ms; }
+}
+
+/* ==========================================================================
+   Fonts. Self-hosted, no third-party request, no CDN.
+   Three registers, exactly as meritalien: sans for headings and UI,
+   serif for leads, mono for eyebrows, labels and index numbers.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader-Italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Departure Mono";
+  src: url("../fonts/DepartureMono-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}

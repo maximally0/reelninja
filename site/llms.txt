@@ -1,0 +1,52 @@
+# ReelNinja
+
+> Video production infrastructure for content companies. We turn a company's
+> editing workflow into a production system, so output stops being capped by how
+> many editors it can hire.
+
+ReelNinja builds a **Style System** from videos a company has already published:
+type, colour, caption style, hook structure, pacing, transitions, B-roll rules,
+sound and end cards. Raw footage then goes through that system in production,
+with a human QA pass signing off on every frame before anything ships. The
+company keeps its clients, its strategy and its creative direction. ReelNinja
+owns production and never speaks to the end client.
+
+The per-video rate falls as monthly volume rises, because every video produced
+makes the system better at that company's style.
+
+## What it is
+
+- Production infrastructure, not an agency and not a tool the client runs.
+- Built for content companies running five or more creators, channels or shows,
+  each needing twenty to a hundred pieces a month.
+- The client's clients never deal with ReelNinja. Work ships under the client's
+  own name.
+
+## Pricing
+
+All prices in Indian rupees (INR), published rather than negotiable.
+
+- One-time Style System setup: ₹50,000 – ₹2,00,000, depending on how
+  many formats, brands, motion and avatar requirements there are. Quoted before
+  any commitment.
+- Per video, by monthly volume: ₹500 (1–20), ₹400 (21–50),
+  ₹300 (51–100), ₹200 (101–250), from ₹150 (251+).
+- Avatar, motion-graphics and long-form edits are quoted separately.
+
+There is an interactive calculator on the site that runs the visitor's own
+numbers (creators, videos per creator, human editing minutes per video, editor
+hourly cost) against this published ladder.
+
+## Limits
+
+ReelNinja is not an agency and does not find clients, does not do strategy,
+positioning or creative direction, and does not provide legal advice. Below
+roughly 100 videos a month the setup does not pay for itself and the answer is
+that ReelNinja is the wrong fit. No leads, clients, revenue, views or followers
+are promised.
+
+## Pages
+
+- [Home](https://reelninja.visual-language-4c9.workers.dev/): positioning, the three-layer system, the calculator, the
+  published pricing ladder and the FAQ.
+- [Book a 20-minute call](https://reelninja.visual-language-4c9.workers.dev/book/): the scheduling surface.

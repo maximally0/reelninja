@@ -1,0 +1,17 @@
+# Cloudflare deploy config for ReelNinja.
+#
+# Static assets only — there is no Worker script here, which is the point: the
+# landing page makes zero third-party requests and needs no server logic. The
+# only dynamic surface, the booking calendar, is a third-party iframe on
+# /book/ and is loaded by the browser directly.
+#
+# Deploy: npx wrangler deploy --temporary
+# The --temporary flag publishes to a throwaway preview account with no login,
+# which is what makes this a shareable link rather than a real deployment.
+
+name = "reelninja"
+compatibility_date = "2025-09-24"
+
+[assets]
+directory = "./site"
+html_handling = "auto-trailing-slash"

@@ -1,0 +1,9 @@
+# Normalise line endings so `git status` stays readable as evidence. Without
+# this, Windows checkout rewrites every file and real edits get buried in
+# line-ending noise.
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.png   binary
+*.ico   binary
+*.woff2 binary
